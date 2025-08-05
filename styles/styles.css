@@ -165,7 +165,12 @@ h1 {
 }
 
 h2 {
-  font-size: var(--heading-font-size-xl);
+  /* font-size: var(--heading-font-size-xl); */
+  font-size: 2rem;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 
 h3 {
