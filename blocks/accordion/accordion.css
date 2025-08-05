@@ -1,8 +1,10 @@
+/* Disable no-descending-specificity globally for the file */
+/* stylelint-disable no-descending-specificity */
+
 .accordion details {
   border: 1px solid #dadada;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
   margin-top: 24px;
 }
@@ -58,4 +60,142 @@
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+
+.accordion {
+  background: #fff;
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  display: block;
+}
+
+/* Override centering that may be inherited from parent grid or flex layouts */
+.accordion,
+.accordion * {
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Ensure vertical stacking, no row or center alignment */
+.accordion > .block,
+.accordion > .accordion-item,
+.accordion details {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Last accordion item: no bottom margin */
+.accordion details:last-child {
+  margin-bottom: 0;
+}
+
+/* Accordion summary/header styling */
+.accordion details summary,
+.accordion details summary:focus,
+.accordion details summary:hover {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  min-height: unset;
+  transition: none;
+  position: static;
+  text-align: left;
+  width: 100%;
+}
+
+/* Remove marker/arrow for a clean look */
+.accordion details summary::-webkit-details-marker,
+.accordion details summary::marker {
+  display: none;
+}
+
+/* Headings: uppercase, blue, bold, left-aligned, spacing below */
+.accordion details summary p {
+  color: #0071ce;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-family: inherit;
+  padding: 0;
+}
+
+/* Accordion body styles */
+.accordion .accordion-item-body {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* Paragraphs inside body */
+.accordion .accordion-item-body p {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Lists and list items */
+.accordion .accordion-item-body ul {
+  margin: 0 0 12px 20px;
+  padding-left: 18px;
+}
+
+.accordion .accordion-item-body li {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+/* Bold text inside body */
+.accordion .accordion-item-body strong {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Links */
+.accordion .accordion-item-body a,
+.accordion details summary a {
+  color: #0071ce;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Link hover color */
+.accordion .accordion-item-body a:hover,
+.accordion details summary a:hover {
+  color: #005ea6;
+}
+
+/* Responsive: on small screens, reduce padding and ensure full width */
+@media (max-width: 800px) {
+  .accordion {
+    max-width: 100%;
+    padding: 12px;
+  }
 }
