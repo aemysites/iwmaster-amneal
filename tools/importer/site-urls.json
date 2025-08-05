@@ -1,0 +1,188 @@
+{
+  "originUrl": "https://crexont.com",
+  "lastCrawled": "https://crexont.com/",
+  "urls": [
+    {
+      "url": "https://crexont.com/",
+      "source": "SITEMAPS",
+      "targetPath": "/",
+      "id": "751205e1740f50ec30343e496129d05c4e5a94fb"
+    },
+    {
+      "url": "https://crexont.com/about-good-on-time/",
+      "source": "SITEMAPS",
+      "targetPath": "/about-good-on-time",
+      "id": "dff1d15665f2500d4838b4c218c8822e6ebc7d4b"
+    },
+    {
+      "url": "https://crexont.com/author/acaffiero/",
+      "source": "SITEMAPS",
+      "targetPath": "/author/acaffiero",
+      "id": "cbc7133e2eb31fc5535bf64a95f39a2242c7160c"
+    },
+    {
+      "url": "https://crexont.com/author/matt/",
+      "source": "SITEMAPS",
+      "targetPath": "/author/matt",
+      "id": "d6f5ab9988ef77c2cddcc43e53e4fd0348e1b290"
+    },
+    {
+      "url": "https://crexont.com/category/stories/",
+      "source": "SITEMAPS",
+      "targetPath": "/category/stories",
+      "id": "5651c61e0e979f980e969eb5e38f0985db003566"
+    },
+    {
+      "url": "https://crexont.com/crexont-stories/",
+      "source": "SITEMAPS",
+      "targetPath": "/crexont-stories",
+      "id": "71695ab049e0b230b1096086c1449c4ef6faa63a"
+    },
+    {
+      "url": "https://crexont.com/gaspers-story-strength-family-and-moving-forward/",
+      "source": "SITEMAPS",
+      "targetPath": "/gaspers-story-strength-family-and-moving-forward",
+      "id": "68e14cc5f95e76790d0c33ea3517d1d87c7c0179"
+    },
+    {
+      "url": "https://crexont.com/get-to-know-jeffrey-a-teachers-perspective-on-living-life-to-the-fullest-with-parkinsons/",
+      "source": "SITEMAPS",
+      "targetPath": "/get-to-know-jeffrey-a-teachers-perspective-on-living-life-to-the-fullest-with-parkinsons",
+      "id": "d88bde5bd6e46e4904632315ddfd90d5f661a4a7"
+    },
+    {
+      "url": "https://crexont.com/how-crexont-works/",
+      "source": "SITEMAPS",
+      "targetPath": "/how-crexont-works",
+      "id": "2a67b0dc17ba079ca1350c4ce350c46fdd7fbaae"
+    },
+    {
+      "url": "https://crexont.com/lauras-story-redefining-life-with-parkinsons/",
+      "source": "SITEMAPS",
+      "targetPath": "/lauras-story-redefining-life-with-parkinsons",
+      "id": "962f88f3261b7b0b94309377064f3a6afb863302"
+    },
+    {
+      "url": "https://crexont.com/meet-dr-morgan-from-treating-parkinsons-to-living-with-it/",
+      "source": "SITEMAPS",
+      "targetPath": "/meet-dr-morgan-from-treating-parkinsons-to-living-with-it",
+      "id": "e478f59cde0a16f1c01a963f9e9e790c429977e9"
+    },
+    {
+      "url": "https://crexont.com/meet-lori-finding-freedom-and-balance-in-the-parkinsons-journey/",
+      "source": "SITEMAPS",
+      "targetPath": "/meet-lori-finding-freedom-and-balance-in-the-parkinsons-journey",
+      "id": "84f1d6bbee0b377b8c0ae72ca9821c08c17eb1da"
+    },
+    {
+      "url": "https://crexont.com/navins-journey-how-music-movement-and-positivity-shaped-his-path-with-parkinsons/",
+      "source": "SITEMAPS",
+      "targetPath": "/navins-journey-how-music-movement-and-positivity-shaped-his-path-with-parkinsons",
+      "id": "de1758afe538e9c912cd235f9f121f75d3fc209e"
+    },
+    {
+      "url": "https://crexont.com/randys-story-span-living-with-parkinsons-on-his-own-terms/",
+      "source": "SITEMAPS",
+      "targetPath": "/randys-story-span-living-with-parkinsons-on-his-own-terms",
+      "id": "0d8c47f5e85022bcfb0aad28196a8972228d5af6"
+    },
+    {
+      "url": "https://crexont.com/resource/american-parkinson-disease-association/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/american-parkinson-disease-association",
+      "id": "be85d278b30b5d17c6da1d72f83f2a58b3ec9e59"
+    },
+    {
+      "url": "https://crexont.com/resource/davis-phinney-foundation/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/davis-phinney-foundation",
+      "id": "4d6fb7f486364d52c74f1ccfbdeaefb797cea0a6"
+    },
+    {
+      "url": "https://crexont.com/resource/michael-j-fox-foundation-for-parkinsons-research/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/michael-j-fox-foundation-for-parkinsons-research",
+      "id": "88b3b00929d6ec1540e1ceebb3799ac7e43a6d9e"
+    },
+    {
+      "url": "https://crexont.com/resource/parkinson-movement-disorder-alliance/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/parkinson-movement-disorder-alliance",
+      "id": "f2c388cc60710982d31e5d566f749c528a14424d"
+    },
+    {
+      "url": "https://crexont.com/resource/the-parkinson-council/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/the-parkinson-council",
+      "id": "2d5eb1a5b5fb0f4d5a7aadecaacab88e0fd4cf20"
+    },
+    {
+      "url": "https://crexont.com/resource/the-parkinsons-foundation/",
+      "source": "SITEMAPS",
+      "targetPath": "/resource/the-parkinsons-foundation",
+      "id": "aebadef640324202b3c9dc54f6999c310f5deecd"
+    },
+    {
+      "url": "https://crexont.com/safety/",
+      "source": "SITEMAPS",
+      "targetPath": "/safety",
+      "id": "f086aea4861098efc6a1a96a50cee13a6299d9ad"
+    },
+    {
+      "url": "https://crexont.com/sign-up/",
+      "source": "SITEMAPS",
+      "targetPath": "/sign-up",
+      "id": "e086142215c3f699c1c1c04e542524974e02316a"
+    },
+    {
+      "url": "https://crexont.com/sitemap/",
+      "source": "SITEMAPS",
+      "targetPath": "/sitemap",
+      "id": "120e5dd599299e874e5859b86dd51fb68f5919ff"
+    },
+    {
+      "url": "https://crexont.com/starting-crexont/",
+      "source": "SITEMAPS",
+      "targetPath": "/starting-crexont",
+      "id": "07f632ea460e4d0d67933f1157621636ee04aef8"
+    },
+    {
+      "url": "https://crexont.com/stay-updated/",
+      "source": "SITEMAPS",
+      "targetPath": "/stay-updated",
+      "id": "e3f183f55c883e6c87edbdbd01e5df8de46e1d97"
+    },
+    {
+      "url": "https://crexont.com/stuart-in-motion-staying-active-with-parkinsons-disease/",
+      "source": "SITEMAPS",
+      "targetPath": "/stuart-in-motion-staying-active-with-parkinsons-disease",
+      "id": "cc5d06bde1a1a4e16a8a52f0766a6e12acec38a1"
+    },
+    {
+      "url": "https://crexont.com/support-resources/",
+      "source": "SITEMAPS",
+      "targetPath": "/support-resources",
+      "id": "78978546573e667f7ebe6889a977f9af795fb9cc"
+    },
+    {
+      "url": "https://crexont.com/thank-you/",
+      "source": "SITEMAPS",
+      "targetPath": "/thank-you",
+      "id": "6ee86ec51a15be7a979100074c683d8437d4d828"
+    }
+  ],
+  "crawlOptions": {
+    "timeout": 64800000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": -1,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "sitemaps",
+    "logger": {},
+    "strategiesAttempted": [
+      "SITEMAPS"
+    ]
+  },
+  "extractionErrors": []
+}
