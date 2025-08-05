@@ -1,4 +1,3 @@
-/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -252,5 +251,141 @@
 
   .cards.cards22 .cards-card-image {
     margin-bottom: 12px;
+  }
+}
+
+
+.cards.cards33 {
+  display: block;
+  background: #f5feff;
+  padding: 24px 0;
+}
+
+/* Card List: Responsive 4-column grid */
+.cards.cards33 > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  justify-content: center;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background: none;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1100px) {
+  .cards.cards33 > ul {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 520px;
+  }
+}
+@media (max-width: 650px) {
+  .cards.cards33 > ul {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 16px;
+  }
+}
+
+/* Card: fixed width, TALLER, compact, left-aligned */
+.cards.cards33 > ul > li {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #cde8f2;
+  border-radius: 8px;
+  min-width: 0;
+  max-width: 230px;
+  width: 100%;
+  min-height: 220px;
+  /* Optionally, try aspect-ratio for extra precision: */
+  /* aspect-ratio: 0.95 / 1; */
+  padding-top: 32px;
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Per-card gradients */
+.cards.cards33 > ul > li:nth-child(1) {
+  background: linear-gradient(153deg, #fff7ce 0%, #fff 70%);
+}
+.cards.cards33 > ul > li:nth-child(2) {
+  background: linear-gradient(153deg, #e4fded 0%, #fff 70%);
+}
+.cards.cards33 > ul > li:nth-child(3) {
+  background: linear-gradient(153deg, #ebe8ff 0%, #fff 70%);
+}
+.cards.cards33 > ul > li:nth-child(4) {
+  background: linear-gradient(153deg, #ffe8ce 0%, #fff 70%);
+}
+
+/* Capsule image: centered, hovering above card */
+.cards.cards33 .cards-card-image {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 42px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  background: none;
+}
+
+.cards.cards33 .cards-card-image img {
+  width: 42px;
+  height: 52px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Card body: more top padding for vertical balance */
+.cards.cards33 .cards-card-body {
+  margin: 0;
+  padding: 18px 12px 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards.cards33 .cards-card-body p {
+  margin: 0;
+  font-size: 13px;
+  color: #535a60;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.cards.cards33 .cards-card-body p strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a3e53;
+  margin-top: 2px;
+  line-height: 1.15;
+}
+
+@media (max-width: 400px) {
+  .cards.cards33 > ul > li {
+    max-width: 100%;
+    min-height: 155px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .cards.cards33 .cards-card-body {
+    padding-left: 8px;
+    padding-right: 6px;
+    padding-bottom: 18px;
   }
 }
