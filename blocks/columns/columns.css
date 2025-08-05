@@ -1,4 +1,5 @@
-/* Fixed CSS Code */
+/* stylelint-disable no-descending-specificity */
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -33,14 +34,12 @@
   }
 }
 
-
 .columns.columns40 {
   background: #f5fefc;
   padding: 0;
-  min-height: 1px; /* Ensures block is always rendered */
+  min-height: 1px;
 }
 
-/* Main flex row, generous space between columns */
 .columns.columns40 > div {
   display: flex;
   flex-direction: row;
@@ -48,10 +47,9 @@
   justify-content: flex-start;
   gap: 4.8rem;
   padding: 3.5rem 2.5rem 3.5rem 3rem;
-  min-height: 1px; /* Ensure flex container is visible even if content fails */
+  min-height: 1px;
 }
 
-/* Text column: narrower for compactness */
 .columns.columns40 > div > div:first-child {
   flex: 1 1 60%;
   max-width: 520px;
@@ -61,7 +59,6 @@
   min-width: 0;
 }
 
-/* Heading: larger, more readable, slightly more margin */
 .columns.columns40 h4 {
   color: #123a55;
   font-size: 2.7rem;
@@ -70,10 +67,9 @@
   margin: 0 0 1.35rem;
   font-family: var(--heading-font-family);
   letter-spacing: -0.01em;
-  overflow-wrap: break-word; /* Fixed deprecated "word-break" */
+  overflow-wrap: break-word;
 }
 
-/* Description below heading: improved line length/space */
 .columns.columns40 h4 + p {
   color: #535353;
   font-size: 1.09rem;
@@ -81,10 +77,9 @@
   font-family: var(--body-font-family);
   max-width: 98%;
   line-height: 1.47;
-  overflow-wrap: break-word; /* Fixed deprecated "word-break" */
+  overflow-wrap: break-word;
 }
 
-/* Button: closer grouping below description */
 .columns.columns40 .button-container .button {
   background: none;
   color: #123a55;
@@ -110,7 +105,6 @@
   border-color: #123a55;
 }
 
-/* Image column: allow it to be larger and well-aligned */
 .columns.columns40 .columns-img-col {
   flex: 0 1 420px;
   display: flex;
@@ -186,5 +180,98 @@
   .columns.columns40 .button-container .button {
     font-size: 1rem;
     padding: 0.5em 1.2em;
+  }
+}
+
+.columns.columns32 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4px 12px;
+  gap: 36px;
+}
+
+.columns.columns32 > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.columns.columns32 h4 {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  color: #162c5b;
+  line-height: 1.18;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+}
+
+.columns.columns32 p:not(.button-container) {
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  color: #444b5d;
+  margin: 0;
+  line-height: 1.4;
+  padding: 0;
+  letter-spacing: 0;
+}
+
+.columns.columns32 > div > div:last-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.columns.columns32 .button-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.columns.columns32 .button-container .button {
+  background: #001b54;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0.3em 2em;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: unset;
+  transition: background 0.2s;
+}
+
+.columns.columns32 .button-container .button:hover,
+.columns.columns32 .button-container .button:focus {
+  background: #163c7b;
+  color: #fff;
+}
+
+@media (width <= 800px) {
+  .columns.columns32 > div {
+    flex-direction: column;
+    gap: 16px;
+    padding: 6px 4px;
+  }
+
+  .columns.columns32 > div > div:last-child,
+  .columns.columns32 .button-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 12px;
   }
 }
