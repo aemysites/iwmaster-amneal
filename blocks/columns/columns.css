@@ -1,4 +1,4 @@
-/* Global disable of no-descending-specificity as the rule conflicts with the intent and structure of the selectors */
+/* Disable no-descending-specificity globally */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
@@ -287,7 +287,6 @@
   margin: 0;
 }
 
-/* Key layout: logo and nav side-by-side, vertically centered */
 .columns.columns5 > div {
   display: flex;
   flex-direction: row;
@@ -300,7 +299,6 @@
   background: #fff;
 }
 
-/* Logo area */
 .columns.columns5 .columns-img-col:first-child {
   display: flex;
   align-items: center;
@@ -320,7 +318,6 @@
   display: block;
 }
 
-/* Navigation column */
 .columns.columns5 .columns-img-col:last-child {
   display: flex;
   align-items: center;
@@ -330,7 +327,6 @@
   padding: 0;
 }
 
-/* Nav list: one single horizontal row, no wrapping, scroll on overflow */
 .columns.columns5 .columns-img-col:last-child ul {
   display: flex;
   flex-flow: row nowrap;
@@ -350,7 +346,6 @@
   display: none;
 }
 
-/* Nav items: tight horizontal spacing, divider, no wrap */
 .columns.columns5 .columns-img-col:last-child li {
   display: flex;
   align-items: center;
@@ -364,20 +359,17 @@
   height: 56px;
 }
 
-/* Remove list bullets everywhere */
 .columns.columns5 .columns-img-col:last-child ul,
 .columns.columns5 .columns-img-col:last-child li {
   list-style: none;
 }
 
-/* Divider: subtle, tight */
 .columns.columns5 .columns-img-col:last-child li + li {
   border-left: 1px solid #e6e6e6;
   margin-left: 0;
   padding-left: 16px;
 }
 
-/* Nav links styling */
 .columns.columns5 .columns-img-col:last-child a {
   color: #172153;
   text-decoration: none;
@@ -398,7 +390,6 @@
   text-decoration: underline;
 }
 
-/* Social icons (Facebook/LinkedIn) */
 .columns.columns5 .columns-img-col:last-child li picture {
   margin: 0 4px;
   display: flex;
@@ -415,7 +406,6 @@
   vertical-align: middle;
 }
 
-/* Responsive: stack logo/nav on mobile */
 @media (width <= 850px) {
   .columns.columns5 > div {
     flex-direction: column;
@@ -450,5 +440,67 @@
     padding-left: 16px;
     margin-left: 0;
     margin-top: 2px;
+  }
+}
+
+.columns.columns18,
+.columns.columns18 > div,
+.columns.columns18 > div > div,
+.columns.columns18 ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.columns.columns18 {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns18 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+}
+
+.columns.columns18 ul li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.05;
+}
+
+.columns.columns18 ul li a {
+  color: #222;
+  font-size: 11px;
+  font-family: var(--body-font-family, sans-serif);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.05;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (width <= 600px) {
+  .columns.columns18 ul {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .columns.columns18 ul li a {
+    font-size: 13px;
   }
 }
