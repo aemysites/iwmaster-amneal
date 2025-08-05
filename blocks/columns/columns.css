@@ -1,3 +1,4 @@
+/* Fixed CSS Code */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +30,161 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+
+.columns.columns40 {
+  background: #f5fefc;
+  padding: 0;
+  min-height: 1px; /* Ensures block is always rendered */
+}
+
+/* Main flex row, generous space between columns */
+.columns.columns40 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4.8rem;
+  padding: 3.5rem 2.5rem 3.5rem 3rem;
+  min-height: 1px; /* Ensure flex container is visible even if content fails */
+}
+
+/* Text column: narrower for compactness */
+.columns.columns40 > div > div:first-child {
+  flex: 1 1 60%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+/* Heading: larger, more readable, slightly more margin */
+.columns.columns40 h4 {
+  color: #123a55;
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1.18;
+  margin: 0 0 1.35rem;
+  font-family: var(--heading-font-family);
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word; /* Fixed deprecated "word-break" */
+}
+
+/* Description below heading: improved line length/space */
+.columns.columns40 h4 + p {
+  color: #535353;
+  font-size: 1.09rem;
+  margin: 0 0 0.7rem;
+  font-family: var(--body-font-family);
+  max-width: 98%;
+  line-height: 1.47;
+  overflow-wrap: break-word; /* Fixed deprecated "word-break" */
+}
+
+/* Button: closer grouping below description */
+.columns.columns40 .button-container .button {
+  background: none;
+  color: #123a55;
+  border: 1.5px solid #123a55;
+  border-radius: 2em;
+  font-size: 1.09rem;
+  font-weight: 500;
+  padding: 0.53em 1.7em;
+  line-height: 1.2;
+  min-width: 0;
+  max-width: unset;
+  margin: 0;
+  white-space: nowrap;
+  box-shadow: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.columns.columns40 .button-container .button:hover,
+.columns.columns40 .button-container .button:focus {
+  background: #123a55;
+  color: #fff;
+  border-color: #123a55;
+}
+
+/* Image column: allow it to be larger and well-aligned */
+.columns.columns40 .columns-img-col {
+  flex: 0 1 420px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+  margin-top: 0;
+}
+
+.columns.columns40 .columns-img-col img {
+  display: block;
+  border-radius: 24px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (width <= 1200px) {
+  .columns.columns40 > div {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 2.7rem;
+  }
+
+  .columns.columns40 .columns-img-col img {
+    max-width: 300px;
+  }
+
+  .columns.columns40 > div > div:first-child {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 900px) {
+  .columns.columns40 > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.2rem;
+    padding: 2rem 0.75rem;
+  }
+
+  .columns.columns40 .columns-img-col {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .columns.columns40 .columns-img-col img {
+    max-width: 95vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (width <= 600px) {
+  .columns.columns40 > div {
+    padding: 1.2rem 0.35rem;
+    gap: 1.2rem;
+  }
+
+  .columns.columns40 h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .columns.columns40 h4 + p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .columns.columns40 .button-container .button {
+    font-size: 1rem;
+    padding: 0.5em 1.2em;
   }
 }
