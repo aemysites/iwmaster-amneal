@@ -1,3 +1,4 @@
+/* Updated CSS Code */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,137 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards.cards25 {
+  width: 100%;
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 3-column grid, tight gap */
+.cards.cards25 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Card appearance and content alignment */
+.cards.cards25 > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: radial-gradient(ellipse at 40% 20%, #84D399 0%, #1380B6 70%, #0B6DAE 100%);
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 32px 24px;
+  color: #fff;
+  min-height: 370px;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon: Always show, center, and size */
+.cards.cards25 .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  min-height: 40px;
+  width: 100%;
+  margin-bottom: 14px; /* slightly tighter spacing */
+  margin-top: 0;
+}
+
+.cards.cards25 .cards-card-image img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  opacity: 1;
+  filter: none;
+  background: none;
+}
+
+.cards.cards25 .cards-card-image picture > img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  opacity: 1;
+  filter: none;
+  background: none;
+}
+
+/* Remove any default min or max size for icons nested in .cards-card-body */
+.cards.cards25 .cards-card-body img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: auto;
+  margin: 0;
+  filter: none;
+}
+
+/* Card body vertical stack and left align */
+.cards.cards25 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Heading: more prominence */
+.cards.cards25 .cards-card-body h4 {
+  color: #fff;
+  font-size: 26px;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+/* Body text: slightly more readable */
+.cards.cards25 .cards-card-body p {
+  color: #f3f8fc;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  text-align: left;
+}
+
+/* Responsive: stack cards on mobile */
+@media (width <= 900px) {
+  .cards.cards25 > ul {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cards.cards25 > ul > li {
+    min-height: 0;
+    padding: 24px 12px;
+    border-radius: 18px;
+  }
 }
