@@ -1,3 +1,4 @@
+/* Global disable of no-descending-specificity as the rule conflicts with the intent and structure of the selectors */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
@@ -273,5 +274,181 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 12px;
+  }
+}
+
+.columns.columns5 {
+  background: #fff;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+  font-size: 14px;
+  color: #172153;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Key layout: logo and nav side-by-side, vertically centered */
+.columns.columns5 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 56px;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+
+/* Logo area */
+.columns.columns5 .columns-img-col:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 140px;
+  margin-right: 24px;
+  height: 56px;
+  padding: 0;
+}
+
+.columns.columns5 .columns-img-col:first-child picture,
+.columns.columns5 .columns-img-col:first-child img {
+  max-height: 42px;
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation column */
+.columns.columns5 .columns-img-col:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 56px;
+  padding: 0;
+}
+
+/* Nav list: one single horizontal row, no wrapping, scroll on overflow */
+.columns.columns5 .columns-img-col:last-child ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+  overflow-x: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: none;
+  scrollbar-width: none;
+}
+
+.columns.columns5 .columns-img-col:last-child ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Nav items: tight horizontal spacing, divider, no wrap */
+.columns.columns5 .columns-img-col:last-child li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 16px;
+  position: relative;
+  font-size: 14px;
+  color: #172153;
+  background: none;
+  white-space: nowrap;
+  height: 56px;
+}
+
+/* Remove list bullets everywhere */
+.columns.columns5 .columns-img-col:last-child ul,
+.columns.columns5 .columns-img-col:last-child li {
+  list-style: none;
+}
+
+/* Divider: subtle, tight */
+.columns.columns5 .columns-img-col:last-child li + li {
+  border-left: 1px solid #e6e6e6;
+  margin-left: 0;
+  padding-left: 16px;
+}
+
+/* Nav links styling */
+.columns.columns5 .columns-img-col:last-child a {
+  color: #172153;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: inherit;
+  display: inline-block;
+  padding: 0 1px;
+  margin: 0;
+  line-height: 1;
+  background: none;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+
+.columns.columns5 .columns-img-col:last-child a:hover,
+.columns.columns5 .columns-img-col:last-child a:focus {
+  color: #0055a6;
+  text-decoration: underline;
+}
+
+/* Social icons (Facebook/LinkedIn) */
+.columns.columns5 .columns-img-col:last-child li picture {
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.columns.columns5 .columns-img-col:last-child li picture img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: transparent;
+  display: block;
+  vertical-align: middle;
+}
+
+/* Responsive: stack logo/nav on mobile */
+@media (width <= 850px) {
+  .columns.columns5 > div {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+  }
+
+  .columns.columns5 .columns-img-col:first-child,
+  .columns.columns5 .columns-img-col:last-child {
+    width: 100%;
+    margin-right: 0;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .columns.columns5 .columns-img-col:last-child ul {
+    flex-wrap: wrap;
+    white-space: normal;
+    overflow-x: visible;
+    width: 100%;
+  }
+
+  .columns.columns5 .columns-img-col:last-child li {
+    padding: 4px 16px;
+    font-size: 13px;
+    height: auto;
+  }
+
+  .columns.columns5 .columns-img-col:last-child li + li {
+    border-left: none;
+    border-top: 1px solid #e6e6e6;
+    padding-left: 16px;
+    margin-left: 0;
+    margin-top: 2px;
   }
 }
