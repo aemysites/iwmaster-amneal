@@ -1,6 +1,3 @@
-/* Disable no-descending-specificity globally */
-/* stylelint-disable no-descending-specificity */
-
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -503,4 +500,149 @@
   .columns.columns18 ul li a {
     font-size: 13px;
   }
+}
+
+
+.columns.columns4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #0080C0 0%, #A7D6BC 100%);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Main text column */
+.columns.columns4 > div {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 36px 0 36px 54px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Ensure max width for improved text wrapping */
+.columns.columns4 > div > div {
+  max-width: 430px;
+}
+
+/* Label styling */
+.columns.columns4 > div > div > p:first-child {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 0 9px 0;
+}
+
+/* Headline styling */
+.columns.columns4 > div > div > h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.12;
+  margin: 0 0 18px 0;
+  word-break: break-word;
+}
+
+/* Supporting text styling */
+.columns.columns4 > div > div > p:last-child {
+  color: #D6EFFF;
+  font-size: 17px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* IMAGE COLUMN VIA PSEUDO-ELEMENT */
+.columns.columns4::after {
+  display: block;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 180px;
+  margin-left: 48px;
+  margin-right: 40px;
+  border-radius: 14px;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=300') center center/cover no-repeat;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  align-self: center;
+  content: "";
+  position: relative;
+  z-index: 1;
+}
+
+/* VERTICAL DIVIDER */
+.columns.columns4::before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 110px;
+  background: #C7E0D8;
+  margin-left: 32px;
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* Place divider and image in flex row */
+.columns.columns4::after,
+.columns.columns4::before {
+  /* This ensures ::before comes before ::after in visual order */
+  order: 1;
+}
+
+.columns.columns4 > div {
+  order: 0;
+}
+.columns.columns4::before { order: 1; }
+.columns.columns4::after { order: 2; }
+
+@media (max-width: 900px) {
+  .columns.columns4 {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 98vw;
+    padding: 0;
+    border-radius: 14px;
+  }
+
+  .columns.columns4 > div {
+    padding: 28px 16px 16px 16px;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+  .columns.columns4 > div > div {
+    max-width: 100%;
+  }
+  .columns.columns4::before,
+  .columns.columns4::after {
+    margin: 24px auto 0 auto;
+    align-self: center;
+  }
+  .columns.columns4::before {
+    display: none;
+  }
+  .columns.columns4::after {
+    width: 88vw;
+    max-width: 320px;
+    height: 150px;
+    margin: 20px auto 24px auto;
+    border-radius: 12px;
+  }
+}
+
+/* Hides unwanted images in the columns (if any exist in the future HTML) */
+.columns.columns4 img {
+  display: none;
 }
